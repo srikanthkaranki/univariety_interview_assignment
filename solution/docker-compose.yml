@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  application:
+    image: iammrchetan/csvserver:1.0.1 
+    ports:
+      - "9393:9300"
+    env_file:
+      - csvserver.env
+
+    volumes:
+      - type: bind
+        source: ./inputFile
+        target: /csvserver/inputdata
