@@ -12,6 +12,8 @@ services:
       - type: bind
         source: ./inputFile
         target: /csvserver/inputdata
+    networks:
+      - app_network
   prometheus:
     image: prom/prometheus:v2.22.0
     ports:
@@ -20,3 +22,8 @@ services:
       - type: bind
         source: ./prometheus.yml
         target: /etc/prometheus/prometheus.yml
+    networks:
+      - app_network
+networks:
+  app_network:
+    driver: bridge
