@@ -1,10 +1,10 @@
 Git Local Workspace Setup:-
 ===========================
 1) Go to /opt on the vm
-*cd /opt
+cd /opt
 
 2) Clone the project
-*git clone https://github.com/iammrchetan/interview-assignment.git  --> To clone the git repository
+git clone https://github.com/iammrchetan/interview-assignment.git  --> To clone the git repository
 
 3) Go to interview-assignment/solution folder
 cd interview-assignment/solution
@@ -36,8 +36,8 @@ docker ps -a
 7) Command to see the logs of a container
 docker logs <container id>
 
-8) Mounted locally created inputFile to /csvserver/inputdata path in the container and started the container using below command
-*docker run -d -P --mount type=bind,source="$(pwd)"/inputFile,target=/csvserver/inputdata iammrchetan/csvserver:1.0.1
+8) Mounted locally created inputFile to /csvserver/inputdata path in the container and started the container using below command.
+docker run -d -P --mount type=bind,source="$(pwd)"/inputFile,target=/csvserver/inputdata iammrchetan/csvserver:1.0.1
 
 9) Command to get the shell access to the container
 docker exec -it <container id> /bin/sh
