@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  application:
+  csvserver:
     image: iammrchetan/csvserver:1.0.1 
     ports:
       - "9393:9300"
@@ -12,3 +12,11 @@ services:
       - type: bind
         source: ./inputFile
         target: /csvserver/inputdata
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    ports:
+      - "9090:9090"
+    volumes:
+      - type: bind
+        source: ./prometheus.yml
+        target: /etc/prometheus/prometheus.yml
