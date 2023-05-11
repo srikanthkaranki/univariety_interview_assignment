@@ -46,7 +46,7 @@ Soultion Part 1:-
 
 7. Command to see the logs of a container
 
-- docker logs <container id>
+- docker logs container_id
 
 8. Mounted locally created inputFile to /csvserver/inputdata path in the container and started the container using below command
  
