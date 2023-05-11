@@ -54,7 +54,7 @@ Soultion Part 1:-
 
 9. Command to get the shell access to the container
 
-- docker exec -it <container id> /bin/sh
+- docker exec -it container_id /bin/sh
 
 10. Command to see on which port the application is running 
 - netstat -tulpn | grep LISTEN
@@ -65,7 +65,7 @@ Soultion Part 1:-
 
 11. Deleted the container with the use of below command
 
-- docker rm -f <container id>
+- docker rm -f container_id
 
 12. Run the new container expose the service through 9393 port on the host and set the environment variable using below command
 
